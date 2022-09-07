@@ -1,0 +1,83 @@
+﻿body {
+    background-color: #5B5E60;
+}
+.TitleError
+{
+   display:none;
+   color:red;
+}
+.CategoryError 
+{
+    display: none;
+    color: red;
+}
+.EstimateError
+{
+    display:none;
+    color:red;
+}
+.ImportanceError
+{
+    display:none;
+    color:red;
+}
+.Table-Header{
+    text-align:center;
+    border:1px solid grey;
+    border-radius:20px;
+}
+.card {
+    border: 1px solid black;
+    width: 18rem;
+}
+.cardstyle {
+    border-radius:6px;
+    margin-top: 10px;
+    background-color: #212529;
+}
+.cardinputs {
+    border: none;
+    width: -webkit-fill-available;
+    margin-left: 35%;
+}
+.cardinputtitle {
+    border: none;
+    width: -webkit-fill-available;
+}
+label {
+    color: #3C4247;
+}
+input{
+    background-color:transparent;
+}
+.inputstyle{
+    color:white;
+}
+.popup {
+    position:relative;
+    width: 100%;
+    height:30px;
+    background: linear-gradient(to bottom, #65487E,#342E57 );
+    color:white;
+}
+.exit{
+    cursor:pointer;
+    display:none;
+    float:right;
+    margin:5px;
+}
+.infoo {
+    display: none;
+    color: white;
+    border-radius: 50px;
+    width: 20px;
+    background: linear-gradient(to bottom, #A78AC2,#342E57 );
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    margin-right: 3%;
+}
+.Impoinputfield {
+    width:50px;
+    border-radius:5px;
+}

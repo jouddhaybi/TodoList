@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/css/MainStyleSheet.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/JS/Mainjs.js"></script>
+
+<div class="popup">
+    "Anything that can go wrong, will go wrong!"
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="exit bi bi-x-lg" viewBox="0 0 16 16">
+        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+    </svg>
+    </div>
+<div class="infoo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+        <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+    </svg>
+</div>
+<script>
+    $(".popup").mouseover(function () {
+        $(".exit").fadeIn();
+    });
+    $(".popup").mouseleave(function () {
+        $(".exit").css("display","none");
+    });
+    $(".exit").click(function () {
+        $(".popup").css("display", "none");
+         $(".infoo").css("display","block");
+    });
+    $(".infoo").click(function () {
+        $(".infoo").css("display", "none");
+        $(".popup").fadeIn();
+    });
+
+</script>
+<table>
+
+    <tr>
+        <th class="Table-Header">To Do</th>
+        <th class="Table-Header">Doing</th>
+        <th class="Table-Header">Done</th>
+    </tr>
+
+
+
+
+</table>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add TODO</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group row">
+                    <label for="InputTitle" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="InputTitle" placeholder="Title">
+                        <small id="TitleHelp" class="TitleError"> Title is required</small>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="InputCategory" class="col-sm-2 col-form-label">Category</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="InputCategory" placeholder="Category">
+                        <small id="CategoryHelp" class="CategoryError"> Category is required</small>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="InputDate" class="col-sm-2 col-form-label">Due Date</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="InputDate">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="InputEstimate" class="col-sm-2 col-form-label">Estimate</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="InputEstimate" placeholder="Estimate">
+                        <small id="EstimateHelp" class="EstimateError"> Estimate is required</small>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="InputImportance" class="col-sm-2 col-form-label">Importance</label>
+                    <div class="col-sm-10">
+                        <select id="InputImportance" onchange="selectimportance(this.value)" class="form-control">
+                            <option value="0">Default select</option>
+                        </select>
+                        <small id="ImportanceHelp" class="ImportanceError"> Importance is required</small>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" onclick="AddTodoData()" id="AddTodo" class="btn btn-primary">ADD</button>
+            </div>
+        </div>
+    </div>
+</div>
+
