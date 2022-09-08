@@ -31,9 +31,12 @@
     width: 18rem;
 }
 .cardstyle {
-    border-radius:6px;
+    border-radius: 6px;
+    border: none !important;
     margin-top: 10px;
     background-color: #212529;
+    padding: 5px;
+    box-shadow: #212529 1px 5px 10px 1px;
 }
 .cardinputs {
     border: none;
@@ -80,4 +83,28 @@ input{
 .Impoinputfield {
     width:50px;
     border-radius:5px;
+}
+.TableHead {
+    background-color: #212529;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+.signinform {
+    width: 50%;
+    background: linear-gradient(to bottom, #8456A3, #2E2B52);
+     height: 575px;
+}
+.Titlelogin {
+    width: 50%;
+    background-color: #212121;
+    text-align: center;
+    height: 575px;
+}
+.logininput {
+    background-color: #222222;
+    border:none;
+}
+.loginlable{
+    color:white;
 }
